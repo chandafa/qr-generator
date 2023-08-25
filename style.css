@@ -18,6 +18,7 @@ body {
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;
+    
 }
 
 .container p {
@@ -37,7 +38,7 @@ body {
 }
 
 .container button {
-    width: 100%;
+    width: 45%;
     height: 50px;
     background: #494eea;
     color: #fff;
@@ -48,6 +49,8 @@ body {
     cursor: pointer;
     margin: 20px 0;
     font-weight: 500;
+    float: left;
+    margin-left: 10px;
 }
 
 #imgBox {
