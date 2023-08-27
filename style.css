@@ -53,6 +53,17 @@ body {
     margin-left: 10px;
 }
 
+
+.container b button {
+	width: 55%;
+	height: 35px;
+	background-color: green;
+	margin-left: 22%; 
+	
+	
+    
+}
+
 #imgBox {
     width: 200px;
     border-radius: 5px;
