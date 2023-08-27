@@ -13,11 +13,19 @@
 
         <div id="imgBox">
             <img src="" id="qrImage">
+			
+			<b><button type="button" class="button" id="download-button">Download</button></b>
         </div>
 	
-        <button onclick="GenerateQr()">Generate QR Code</button>
+       
+		
+		
+		
+		<button onclick="GenerateQr()">Generate QR Code</button>
 	
 	<a href="index.html" class="btn btn-sm btn-success"><button>Refresh !</button></a>
+	
+	
 
     </div>
 
@@ -27,7 +35,7 @@
 let imgBox = document.getElementById("imgBox")
 let qrImage = document.getElementById("qrImage")
 let qrText = document.getElementById("qrText")
-
+const downloadButton = document.querySelector("#download-button");
 
 function GenerateQr(){
     if(qrText.value.length > 0){
@@ -41,6 +49,17 @@ function GenerateQr(){
     }
     
 }
+
+downloadButton.addEventListener("click", () => {
+    fetch(qrImage.src)
+        .then(response => response.blob())
+        .then(blob => {
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = 'qrImage';
+            a.click();
+        })
+})
 
 </script>
 
